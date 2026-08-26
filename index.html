@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="theme-color" content="#0d3b31" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="apple-mobile-web-app-title" content="Сакина" />
+    <meta name="description" content="Сакина: полный 30-й джуз и избранные чтения Корана." />
+    <title>Сакина — чтение Корана</title>
+    <meta property="og:title" content="Сакина — чтение Корана" />
+    <meta property="og:description" content="Полный 30-й джуз и избранные чтения Корана." />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="og.png" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Сакина — чтение Корана" />
+    <meta name="twitter:description" content="Полный 30-й джуз и избранные чтения Корана." />
+    <meta name="twitter:image" content="og.png" />
+    <link rel="manifest" href="manifest.webmanifest" />
+    <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="hero">
+      <div class="hero__ornament" aria-hidden="true">۞</div>
+      <p class="eyebrow">Аудиоподборка</p>
+      <h1><span lang="ar" dir="rtl">سَكِينَة</span> <span class="title-divider">|</span> Сакина</h1>
+      <p class="hero__text">Полный 30-й джуз и избранные отрывки любимых чтецов. Нажмите ▶︎ — аудио откроется сразу, без предварительного скачивания.</p>
+      <div class="hero__actions">
+        <button class="primary-button" id="offline-button" type="button">Сохранить всё офлайн</button>
+        <button class="secondary-button" id="share-button" type="button">Поделиться сайтом</button>
+      </div>
+      <p class="offline-status" id="offline-status" role="status">Для первого открытия и сохранения нужен интернет. После сохранения записи можно слушать без сети.</p>
+    </header>
+
+    <main>
+      <section class="toolbar" aria-label="Поиск по подборке">
+        <label for="search">Найти суру или чтеца</label>
+        <input id="search" type="search" inputmode="search" placeholder="Например: Ад-Духа или Люхайдан" autocomplete="off" />
+        <p id="result-count" aria-live="polite"></p>
+      </section>
+
+      <section class="collection" aria-labelledby="juz-title">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">Суры 78–114</p>
+            <h2 id="juz-title">30-й джуз</h2>
+          </div>
+          <span>37 сур</span>
+        </div>
+        <div class="track-list" id="juz-list"></div>
+      </section>
+
+      <section class="collection" aria-labelledby="excerpt-title">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">Из разных частей Корана</p>
+            <h2 id="excerpt-title">Душевные отрывки</h2>
+          </div>
+          <span>18 аудиозаписей</span>
+        </div>
+        <div class="track-list" id="excerpt-list"></div>
+      </section>
+    </main>
+
+    <footer>
+      <p>Слушайте с пользой и делитесь с близкими.</p>
+    </footer>
+
+    <noscript>Для работы аудиокаталога включите JavaScript в браузере.</noscript>
+    <script src="app.js" defer></script>
+  </body>
+</html>
